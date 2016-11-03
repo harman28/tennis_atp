@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $# -eq 0 ]; then 
+if [ $# -eq 0 ]; then
    MYDATABASE="atpdatabase"
 else
    MYDATABASE=$1
