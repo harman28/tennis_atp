@@ -1,18 +1,21 @@
 #!/bin/bash
 
 #Set database name
-if [ $# -eq 2 ]; then
+if [ $# -eq 0 ]; then
    MYDATABASE="atpdatabase"
-elif [ $# -eq 3 ]; then
-   MYDATABASE=$3
+elif [ $# -eq 1 ]; then
+   MYDATABASE=$1
 else
   echo "Invalid parameters!";
   exit 1
 fi
 
-#Get MySQL username and password from the arguments
-USERNAME=$1
-PASSWORD=$2
+#Get MySQL username and password
+echo -n "MySQL Username: "
+read USERNAME
+echo -n "Password: "
+read -s PASSWORD
+echo
 
 #Get PWD
 PWD=`pwd`
